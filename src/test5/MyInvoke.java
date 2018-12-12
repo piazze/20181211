@@ -19,7 +19,6 @@ public class MyInvoke implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        //System.out.println("代理对象的内存地址：" + proxy);
         System.out.println("---------开始代理------------");
         Object obj = method.invoke(this.obj,args);
         System.out.println("---------代理完成------------");
